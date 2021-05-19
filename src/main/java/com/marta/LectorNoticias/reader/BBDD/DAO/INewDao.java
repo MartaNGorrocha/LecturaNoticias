@@ -1,4 +1,4 @@
-package com.marta.LectorNoticias.reader.BBDD;
+package com.marta.LectorNoticias.reader.BBDD.DAO;
 
 import java.sql.Date;
 import java.sql.SQLException;

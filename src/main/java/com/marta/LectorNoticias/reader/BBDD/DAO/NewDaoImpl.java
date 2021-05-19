@@ -1,4 +1,4 @@
-package com.marta.LectorNoticias.reader.BBDD;
+package com.marta.LectorNoticias.reader.BBDD.DAO;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -24,7 +24,6 @@ public class NewDaoImpl extends GenericDao implements INewDao, INewsCreator {
 	@Override
 	public List<New> findAll() throws SQLException {
 		List<New> lista ;
-//		GenericDao genericDao= new GenericDao();
 		Connection conn = null;
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -96,7 +95,6 @@ public class NewDaoImpl extends GenericDao implements INewDao, INewsCreator {
 			conn = connect();
 			st = conn.prepareStatement ("select * from t_noticia  where a_title = ?");
 				st.setString(1, text);
-//				st.setString(2, "'%"+text+"%'");
 			 lista = new ArrayList<>();
 				rs =  st.executeQuery();
 				while(rs.next()) {

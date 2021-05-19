@@ -28,13 +28,15 @@ public class App
 	Logger LOG =LoggerFactory.getLogger(App.class);
 		
     
-   	ILogic logic = CreatorFactory.getInstancia().getSource("RSS");
-	Date date =new Date(2020-10-05);
-   	logic.showAll();
-	
+   	ILogic logic = CreatorFactory.getInstancia().getSource("5");
+	Date date =new Date(2020-19-05);
+   	LOG.info("Todas");
+	logic.showAll();
+	LOG.info("Por fecha");
 
    	logic.showByDate(date);
-   	logic.showByString("Noticia1");
+   	LOG.info("Por texto");
+   	logic.showByString("acto");
    	
    
    	

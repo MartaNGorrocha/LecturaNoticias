@@ -1,6 +1,6 @@
 package com.marta.LectorNoticias.model;
 
-import java.sql.Date;
+import java.util.Date;
 import java.sql.Timestamp;
 import java.util.Calendar;
 
@@ -61,7 +61,7 @@ public class New {
 		return publicationDate;
 	}
 
-	public void setPublicationDate(Date date) {
+	public void setPublicationDate(java.util.Date date) {
 		this.publicationDate = date;
 	}
 

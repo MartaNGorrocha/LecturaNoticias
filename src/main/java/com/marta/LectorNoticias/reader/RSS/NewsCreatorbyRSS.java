@@ -2,7 +2,7 @@ package com.marta.LectorNoticias.reader.RSS;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -51,7 +51,7 @@ public class NewsCreatorbyRSS implements INewsCreator {
 		    String value = entry.getDescription().getValue();
 		    notice.setDescription(value);
 		    notice.setLink(entry.getLink());
-		    notice.setPublicationDate((Date) entry.getPublishedDate());
+		    notice.setPublicationDate(entry.getPublishedDate());
 		    LOG.info(notice.toString());
 		    news.add(notice);
 		 }

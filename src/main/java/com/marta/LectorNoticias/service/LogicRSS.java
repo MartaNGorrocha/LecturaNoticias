@@ -1,7 +1,7 @@
 package com.marta.LectorNoticias.service;
 
 import java.util.ArrayList;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.Timestamp;
 import java.util.Iterator;
 import java.util.List;
@@ -28,6 +28,10 @@ public class LogicRSS implements ILogic {
 	@Override
 	public List<New> showAll() {
 		List<New> narrowNews =obtainNews();
+		Iterator<New> itNarrowNews = narrowNews.iterator();
+		while(itNarrowNews.hasNext()) {
+			System.out.println(itNarrowNews.next());
+		}
 		return narrowNews;
 	}
 

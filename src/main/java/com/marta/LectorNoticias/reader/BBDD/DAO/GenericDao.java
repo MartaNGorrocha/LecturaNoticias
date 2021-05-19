@@ -1,4 +1,4 @@
-package com.marta.LectorNoticias.reader;
+package com.marta.LectorNoticias.reader.BBDD.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
