@@ -2,9 +2,11 @@ package com.marta.LectorNoticias.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-//import java.sql.Date;
+import java.util.Calendar;
+import java.sql.Date;
 import java.util.List;
-import java.util.Date;
+//import java.util.Date;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,11 +49,11 @@ public class LogicBBDD extends GenericDao implements ILogic {
 	}
 
 	@Override
-	public List<New> showByDate(Date date) {
+	public List<New> showByDate(java.sql.Date date) {
 		INewDao nDao = new NewDaoImpl();
 		List<New> lista = new ArrayList<New>();
 		try {
-			lista =	nDao.findByDate((java.sql.Date) date); 
+			lista =	nDao.findByDate(date); 
 			LOG.info("se forma la lista de las noticias publicadas en "+ date + " de "+lista.size()+ " elementos");
 			for (int i = 0; i < lista.size(); i++) {
 				System.out.println(lista.get(i));

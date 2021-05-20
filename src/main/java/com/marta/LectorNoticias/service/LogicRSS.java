@@ -1,10 +1,11 @@
 package com.marta.LectorNoticias.service;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.sql.Timestamp;
+//import java.util.Date;
+import java.sql.Date;
 import java.util.Iterator;
 import java.util.List;
+
 
 import com.marta.LectorNoticias.model.New;
 import com.marta.LectorNoticias.reader.INewsCreator;
@@ -41,7 +42,7 @@ public class LogicRSS implements ILogic {
 		Iterator<New> itNarrowNews = narrowNews.iterator();
 		List<New> selectedNews = new ArrayList<New>();
 		while(itNarrowNews.hasNext()) {
-			Date newsDate =itNarrowNews.next().getPublicationDate();
+			Date newsDate =(Date) itNarrowNews.next().getPublicationDate();
 			if(newsDate == date) 
 				selectedNews.add(itNarrowNews.next());
 			

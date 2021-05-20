@@ -2,10 +2,10 @@ package com.marta.LectorNoticias.reader.BBDD.DAO;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.List;
 
 import com.marta.LectorNoticias.model.New;
-import com.marta.LectorNoticias.model.NewDTO;
 
 public interface INewDao {
 

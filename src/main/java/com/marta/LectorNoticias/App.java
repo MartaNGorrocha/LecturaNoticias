@@ -4,14 +4,11 @@ package com.marta.LectorNoticias;
 
 
 
-import java.sql.Date;
+import java.util.Calendar;
 
-import org.dozer.DozerBeanMapper;
-import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.marta.LectorNoticias.model.NewDTO;
 import com.marta.LectorNoticias.reader.CreatorFactory;
 import com.marta.LectorNoticias.service.ILogic;
 
@@ -28,15 +25,15 @@ public class App
 	Logger LOG =LoggerFactory.getLogger(App.class);
 		
     
-   	ILogic logic = CreatorFactory.getInstancia().getSource("5");
-	Date date =new Date(2020-19-05);
+   	ILogic logic = CreatorFactory.getInstancia().getSource();
+    java.sql.Date sqlDate = java.sql.Date.valueOf("2020-05-09");
    	LOG.info("Todas");
 	logic.showAll();
 	LOG.info("Por fecha");
 
-   	logic.showByDate(date);
+   	logic.showByDate(sqlDate);
    	LOG.info("Por texto");
-   	logic.showByString("acto");
+   	logic.showByString("Noticia1");
    	
    
    	
